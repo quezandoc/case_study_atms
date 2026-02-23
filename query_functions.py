@@ -1,8 +1,4 @@
-import logging
-
 from logging_decorator import log_function
-
-logger = logging.getLogger(__name__)
 
 @log_function
 def create_temperature_states_table(con):

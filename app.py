@@ -1,8 +1,10 @@
-from duck import DuckDBAnalyzer
-from data_types import dtype_mapping_device, dtype_mapping_sensor, date_cols
-from logging_decorator import log_function
 import logging
+
+from duck import DuckDBAnalyzer
+from logging_decorator import log_function
+
 from query_functions import create_temperature_states_table, anomaly_detection
+from data_types import dtype_mapping_device, dtype_mapping_sensor, date_cols
 
 class Colors:
     GREEN = '\033[92m'

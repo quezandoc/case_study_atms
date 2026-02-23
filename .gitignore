@@ -1,0 +1,3 @@
+app_logs*
+.v/
+__pycache__/
