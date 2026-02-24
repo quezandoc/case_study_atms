@@ -242,7 +242,6 @@ ORDER BY report_date;
 
     df_avail.to_csv(f"{output_folder}report_sensor_availability_daily.csv", index=False)
     monthly_availability.to_csv(f"{output_folder}report_sensor_availability_monthly.csv", index=False)
-    
 
 def generate_device_health_report(analyzer, start_date, end_date, output_folder='output/'):
     """

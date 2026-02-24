@@ -34,5 +34,5 @@ ______________
  Questions to solve:
 1. What's the main goal of a device?
 2. The sensors transmit information, as the device, but is in real time or has a middleware?.
-3. I can assume that the dur postfix means duration and is for the time on that state, but What's cnt postfix (count?)?
+3. I can assume that the dur postfix means duration and is for the time on that state, but What's cnt postfix (count?) is related to transmitting to device?
 
