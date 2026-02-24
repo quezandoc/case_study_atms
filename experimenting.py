@@ -87,6 +87,7 @@ ORDER BY d.report_start_at DESC, s.report_start_at DESC;
         print(set_colored_bold(result_transmission_rate_comparison, Colors.CYAN))
 
         ## Filters for vehicle_id and date range to analyze the transmission patterns for each sensor and identify any correlations between temperature, cold pressure, hot pressure levels and the transmission behavior of the sensors ##
+        # With these querys I can see that the transmitting_dur isn't related to the time of the sensor says that remains on the different levels
         query_every_sensor_transmission_temperature_for_vehicle = f"""
 SELECT s.id, s.sensor_id, s.wheel_id as swid, s.wheel_position as swpos, s.transmission_level as s_tr, 
     s.level_1_high_temperature_dur as s_l1htd, s.level_2_high_temperature_dur as s_l2htd, level_3_high_temperature_dur as s_l3htd, s.level_1_low_temperature_dur as s_l1ltd, s.level_2_low_temperature_dur as s_l2ltd, s.level_3_low_temperature_dur as s_l3ltd, optimal_temperature_dur as s_otd,

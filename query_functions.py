@@ -36,10 +36,10 @@ WITH daily_metrics AS (
         cold_pressure_avg,
         hot_pressure_avg,
         
-        -- Critical Durations (Sum of Level 3 and Level 2 on 75% Low/High for context) utils for ML
-        (COALESCE(level_3_high_temperature_dur + (level_2_high_temperature_dur * 0.75), 0) + COALESCE(level_3_low_temperature_dur + (level_2_low_temperature_dur * 0.75), 0)) as crit_temp_dur,
-        (COALESCE(level_3_high_cold_pressure_dur + (level_2_high_cold_pressure_dur * 0.75), 0) + COALESCE(level_3_low_cold_pressure_dur + (level_2_low_cold_pressure_dur * 0.75), 0)) as crit_cold_dur,
-        (COALESCE(level_3_high_hot_pressure_dur + (level_2_high_hot_pressure_dur * 0.75), 0) + COALESCE(level_3_low_hot_pressure_dur + (level_2_low_hot_pressure_dur * 0.75), 0)) as crit_hot_dur
+        -- Critical Durations (Sum of Level 3 Low/High for context) utils for ML
+        (COALESCE(level_3_high_temperature_dur, 0) + COALESCE(level_3_low_temperature_dur, 0)) as crit_temp_dur,
+        (COALESCE(level_3_high_cold_pressure_dur, 0) + COALESCE(level_3_low_cold_pressure_dur, 0)) as crit_cold_dur,
+        (COALESCE(level_3_high_hot_pressure_dur, 0) + COALESCE(level_3_low_hot_pressure_dur, 0)) as crit_hot_dur
     
     FROM time_in_level_sensor
     WHERE report_start_at BETWEEN '{start_date}' AND '{end_date}'
@@ -263,6 +263,7 @@ def generate_device_health_report(analyzer, start_date, end_date, output_folder=
 SELECT
     device_id,
     vehicle_id,
+    report_start_at::DATE as report_date,
     -- Connectivity Statistics
     AVG(transmitting_dur) as avg_transmit_sec,
     AVG(not_transmitting_dur) as avg_silence_sec,
@@ -270,16 +271,12 @@ SELECT
     ROUND(
         SUM(transmitting_dur)::FLOAT /
         NULLIF(SUM(transmitting_dur + not_transmitting_dur), 0) * 100
-    , 2) as connectivity_efficiency_pct,
-    -- Reliability Categorization based on transmission_level counts
-    -- Level 0 implies very poor coverage or device issue (< 1 hr transmission)
-    SUM(CASE WHEN transmission_level = 0 THEN 1 ELSE 0 END) as days_poor_coverage,
-    SUM(CASE WHEN transmission_level = 1 THEN 1 ELSE 0 END) as days_partial_coverage,
-    SUM(CASE WHEN transmission_level = 2 THEN 1 ELSE 0 END) as days_optimal_coverage
+    , 2) as connectivity_efficiency_pct
+
 FROM time_in_level_device
 WHERE report_start_at BETWEEN '{start_date}' AND '{end_date}'
-GROUP BY 1, 2
-ORDER BY connectivity_efficiency_pct ASC; -- Worst connectivity first
+GROUP BY 1, 2, 3
+ORDER BY report_date ASC; -- Worst connectivity first
     """
     
     df_connectivity = analyzer.query(query_device_connectivity)
