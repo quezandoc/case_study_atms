@@ -1,3 +1,4 @@
+import json
 import logging
 import sqlparse
 import functools
@@ -14,6 +15,21 @@ logging.basicConfig(
     ]
 )
 
+def pretty_format(val):
+    # 1. Si es SQL (detectamos por palabras clave o el comentario --sql que usas)
+    if isinstance(val, str) and any(kw in val.upper() for kw in ['SELECT', 'CREATE', 'WITH', 'INSERT', '--SQL']):
+        formatted_sql = sqlparse.format(
+            val.replace('--sql', ''), # Limpiamos el tag si existe
+            keyword_case='upper',
+            strip_comments=True
+        )
+        return f"\n--- SQL QUERY ---\n{formatted_sql.strip()}\n-----------------"
+
+    if isinstance(val, dict):
+        return f"\n{json.dumps(val, indent=4)}"
+    
+    return repr(val)
+
 def format_if_sql(val):
     if isinstance(val, str) and val.strip().upper().startswith(('SELECT', 'INSERT', 'UPDATE', 'DELETE', 'WITH', 'CREATE')):
         return f"\n{sqlparse.format(val, reindent=True, keyword_case='upper')}\n"
@@ -29,13 +45,12 @@ def log_function(func: Callable) -> Callable:
         logger = logging.getLogger(func.__module__)
         func_name = func.__name__
 
-        # Pretty-print SQL queries if the first argument looks like a SQL string
-        pretty_args = [format_if_sql(a) for a in args]
-        pretty_kwargs = [f"{k}={format_if_sql(v)}" for k, v in kwargs.items()]
+        p_args = [pretty_format(a) for a in args]
+        p_kwargs = [f"{k}={pretty_format(v)}" for k, v in kwargs.items()]
+        
+        func_signature = f"{func_name}(\n    {', '.join(p_args + p_kwargs)}\n)"
 
-        func_signature = f"{func_name}({', '.join(pretty_args + pretty_kwargs)})"
-
-        logger.info(f"Starting execution: {func_signature}")
+        logger.info(f"🚀 Starting: {func_signature}")
         start_time = time.time()
 
         try:

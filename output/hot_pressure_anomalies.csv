@@ -1,1 +1,0 @@
-vehicle_id,v_out_of_service,v_maintenance,sensor_id,wheel_position,wheel_id,hot_p_optimal_dur,hot_p_l1_high_dur,hot_p_l2_high_dur,hot_p_l3_high_dur,hot_p_l1_low_dur,hot_p_l2_low_dur,hot_p_l3_low_dur,hot_pressure_min,hot_pressure_max,hot_pressure_sd,hot_pressure_avg,report_start_at,updated_at

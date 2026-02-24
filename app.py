@@ -3,7 +3,7 @@ import logging
 from duck import DuckDBAnalyzer
 from logging_decorator import log_function
 
-from query_functions import create_temperature_states_table, anomaly_detection
+from query_functions import generate_device_health_report, generate_fleet_health_report, sensor_anomaly_detection
 from data_types import dtype_mapping_device, dtype_mapping_sensor, date_cols
 
 class Colors:
@@ -23,6 +23,10 @@ if __name__ == "__main__":
         #######################################################################
         # First i'll load the data from the csv files into duckDB for analyze ##
         #######################################################################
+
+        START_DATE = '2023-01-01'
+        END_DATE = '2023-12-31'
+
         time_in_level_device_desc = "data/time_in_level_device_desc.csv"
         time_in_level_device_data = "data/time_in_level_device.csv"
 
@@ -44,8 +48,12 @@ if __name__ == "__main__":
         # Now that the data is loaded, we can create the necessary tables and perform the analysis to detect anomalies in temperature states. ##
         #######################################################################
 
-        logger.info("Creating temperature_states table...")
-        create_temperature_states_table(analyzer)
+        logger.info("Performing comprehensive fleet health analysis...")
+        generate_fleet_health_report(analyzer, START_DATE, END_DATE)
+        logger.info("Performing comprehensive device health analysis...")
+        generate_device_health_report(analyzer, START_DATE, END_DATE)
+        logger.info("Performing comprehensive anomaly detection...")
+        sensor_anomaly_detection(analyzer, START_DATE, END_DATE)
 
-        logger.info("Performing anomaly detection...")
-        anomaly_detection(analyzer, '2023-01-01', '2023-12-31')
+    
+    main()

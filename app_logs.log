@@ -1,0 +1,2278 @@
+2026-02-23 23:59:22,722 - __main__ - INFO - 🚀 Starting: main(
+    
+)
+2026-02-23 23:59:22,722 - __main__ - INFO - Starting ATMS Data Analysis Application
+2026-02-23 23:59:22,734 - __main__ - INFO - Registering device data...
+2026-02-23 23:59:22,734 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7f42d5f1b4d0>, 'time_in_level_device', 'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-23 23:59:22,734 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-23 23:59:22,820 - duck - INFO - Completed: load_data - Duration: 0.0854s
+2026-02-23 23:59:22,823 - duck - INFO - Completed: register_dataframe - Duration: 0.0886s
+2026-02-23 23:59:22,823 - __main__ - INFO - Registering sensor data...
+2026-02-23 23:59:22,823 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7f42d5f1b4d0>, 'time_in_level_sensor', 'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-23 23:59:22,823 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-23 23:59:25,725 - duck - INFO - Completed: load_data - Duration: 2.9022s
+2026-02-23 23:59:25,735 - duck - INFO - Completed: register_dataframe - Duration: 2.9116s
+2026-02-23 23:59:25,735 - __main__ - INFO - Performing comprehensive anomaly detection...
+2026-02-23 23:59:25,735 - query_functions - INFO - Starting Comprehensive Anomaly Detection (2023-01-01 to 2023-12-31)...
+2026-02-23 23:59:25,735 - __main__ - ERROR - Error in main after 3.0126s: AttributeError: 'DuckDBAnalyzer' object has no attribute 'con'
+Traceback (most recent call last):
+  File "/home/quezandoc/Documents/BMST/Aplliance/case_study_atms/logging_decorator.py", line 57, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/quezandoc/Documents/BMST/Aplliance/case_study_atms/app.py", line 54, in main
+    results = sensor_anomaly_detection(analyzer, START_DATE, END_DATE)
+  File "/home/quezandoc/Documents/BMST/Aplliance/case_study_atms/query_functions.py", line 77, in sensor_anomaly_detection
+    df = analyzer.con.sql(query_stats).df()
+         ^^^^^^^^^^^^
+AttributeError: 'DuckDBAnalyzer' object has no attribute 'con'. Did you mean: 'conn'?
+2026-02-23 23:59:49,329 - __main__ - INFO - 🚀 Starting: main(
+    
+)
+2026-02-23 23:59:49,329 - __main__ - INFO - Starting ATMS Data Analysis Application
+2026-02-23 23:59:49,340 - __main__ - INFO - Registering device data...
+2026-02-23 23:59:49,340 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7f2c5ae2b4d0>, 'time_in_level_device', 'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-23 23:59:49,340 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-23 23:59:49,424 - duck - INFO - Completed: load_data - Duration: 0.0838s
+2026-02-23 23:59:49,427 - duck - INFO - Completed: register_dataframe - Duration: 0.0869s
+2026-02-23 23:59:49,427 - __main__ - INFO - Registering sensor data...
+2026-02-23 23:59:49,427 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7f2c5ae2b4d0>, 'time_in_level_sensor', 'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-23 23:59:49,427 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-23 23:59:52,323 - duck - INFO - Completed: load_data - Duration: 2.8955s
+2026-02-23 23:59:52,331 - duck - INFO - Completed: register_dataframe - Duration: 2.9043s
+2026-02-23 23:59:52,332 - __main__ - INFO - Performing comprehensive anomaly detection...
+2026-02-23 23:59:52,332 - query_functions - INFO - Starting Comprehensive Anomaly Detection (2023-01-01 to 2023-12-31)...
+2026-02-23 23:59:52,353 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f2c5ae2b4d0>, 
+--- SQL QUERY ---
+WITH daily_metrics AS (
+    SELECT
+        id,
+        report_start_at::DATE AS report_date,
+        sensor_id,
+        vehicle_id,
+        wheel_position,
+
+
+        temperature_avg,
+        cold_pressure_avg,
+        hot_pressure_avg,
+
+
+        (COALESCE(level_3_high_temperature_dur + (level_2_high_temperature_dur * 0.75), 0) + COALESCE(level_3_low_temperature_dur + (level_2_low_temperature_dur * 0.75), 0)) AS crit_temp_dur,
+        (COALESCE(level_3_high_cold_pressure_dur + (level_2_high_cold_pressure_dur * 0.75), 0) + COALESCE(level_3_low_cold_pressure_dur + (level_2_low_cold_pressure_dur * 0.75), 0)) AS crit_cold_dur,
+        (COALESCE(level_3_high_hot_pressure_dur + (level_2_high_hot_pressure_dur * 0.75), 0) + COALESCE(level_3_low_hot_pressure_dur + (level_2_low_hot_pressure_dur * 0.75), 0)) AS crit_hot_dur
+
+    FROM time_in_level_sensor
+    WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+),
+
+rolling_window AS (
+    SELECT
+        *,
+
+        AVG(temperature_avg) OVER w AS ma_temp,
+        STDDEV(temperature_avg) OVER w AS sd_temp,
+
+
+        AVG(cold_pressure_avg) OVER w AS ma_cold,
+        STDDEV(cold_pressure_avg) OVER w AS sd_cold,
+
+
+        AVG(hot_pressure_avg) OVER w AS ma_hot,
+        STDDEV(hot_pressure_avg) OVER w AS sd_hot
+
+    FROM daily_metrics
+    WINDOW w AS (PARTITION BY sensor_id ORDER BY report_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)
+)
+
+SELECT
+    *,
+
+    CASE WHEN sd_temp = 0 OR sd_temp IS NULL THEN 0 ELSE (temperature_avg - ma_temp) / sd_temp END AS z_temp,
+    CASE WHEN sd_cold = 0 OR sd_cold IS NULL THEN 0 ELSE (cold_pressure_avg - ma_cold) / sd_cold END AS z_cold,
+    CASE WHEN sd_hot = 0 OR sd_hot IS NULL THEN 0 ELSE (hot_pressure_avg - ma_hot) / sd_hot END AS z_hot
+FROM rolling_window
+ORDER BY report_date, sensor_id;
+-----------------
+)
+2026-02-23 23:59:52,477 - duck - INFO - Completed: query - Duration: 0.1241s
+2026-02-23 23:59:52,492 - query_functions - INFO - Statistical features extracted. Rows: 104190
+2026-02-23 23:59:52,492 - query_functions - INFO - Training Isolation Forest Model...
+2026-02-23 23:59:57,349 - query_functions - INFO - Analysis Complete. Global Anomalies Detected: 5210
+2026-02-23 23:59:57,349 - query_functions - INFO - Results saved to data/anomalies_powerbi.csv
+2026-02-23 23:59:57,358 - __main__ - INFO - Completed: main - Duration: 8.0290s
+2026-02-24 00:00:43,828 - __main__ - INFO - 🚀 Starting: main(
+    
+)
+2026-02-24 00:00:43,828 - __main__ - INFO - Starting ATMS Data Analysis Application
+2026-02-24 00:00:43,840 - __main__ - INFO - Registering device data...
+2026-02-24 00:00:43,840 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7fd5a531b4d0>, 'time_in_level_device', 'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 00:00:43,840 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 00:00:43,926 - duck - INFO - Completed: load_data - Duration: 0.0860s
+2026-02-24 00:00:43,930 - duck - INFO - Completed: register_dataframe - Duration: 0.0893s
+2026-02-24 00:00:43,930 - __main__ - INFO - Registering sensor data...
+2026-02-24 00:00:43,930 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7fd5a531b4d0>, 'time_in_level_sensor', 'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 00:00:43,930 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 00:00:46,925 - duck - INFO - Completed: load_data - Duration: 2.9953s
+2026-02-24 00:00:46,934 - duck - INFO - Completed: register_dataframe - Duration: 3.0044s
+2026-02-24 00:00:46,935 - __main__ - INFO - Performing comprehensive anomaly detection...
+2026-02-24 00:00:46,935 - query_functions - INFO - Starting Comprehensive Anomaly Detection (2023-01-01 to 2023-12-31)...
+2026-02-24 00:00:46,957 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7fd5a531b4d0>, 
+--- SQL QUERY ---
+WITH daily_metrics AS (
+    SELECT
+        id,
+        report_start_at::DATE AS report_date,
+        sensor_id,
+        vehicle_id,
+        wheel_position,
+
+
+        temperature_avg,
+        cold_pressure_avg,
+        hot_pressure_avg,
+
+
+        (COALESCE(level_3_high_temperature_dur + (level_2_high_temperature_dur * 0.75), 0) + COALESCE(level_3_low_temperature_dur + (level_2_low_temperature_dur * 0.75), 0)) AS crit_temp_dur,
+        (COALESCE(level_3_high_cold_pressure_dur + (level_2_high_cold_pressure_dur * 0.75), 0) + COALESCE(level_3_low_cold_pressure_dur + (level_2_low_cold_pressure_dur * 0.75), 0)) AS crit_cold_dur,
+        (COALESCE(level_3_high_hot_pressure_dur + (level_2_high_hot_pressure_dur * 0.75), 0) + COALESCE(level_3_low_hot_pressure_dur + (level_2_low_hot_pressure_dur * 0.75), 0)) AS crit_hot_dur
+
+    FROM time_in_level_sensor
+    WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+),
+
+rolling_window AS (
+    SELECT
+        *,
+
+        AVG(temperature_avg) OVER w AS ma_temp,
+        STDDEV(temperature_avg) OVER w AS sd_temp,
+
+
+        AVG(cold_pressure_avg) OVER w AS ma_cold,
+        STDDEV(cold_pressure_avg) OVER w AS sd_cold,
+
+
+        AVG(hot_pressure_avg) OVER w AS ma_hot,
+        STDDEV(hot_pressure_avg) OVER w AS sd_hot
+
+    FROM daily_metrics
+    WINDOW w AS (PARTITION BY sensor_id ORDER BY report_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)
+)
+
+SELECT
+    *,
+
+    CASE WHEN sd_temp = 0 OR sd_temp IS NULL THEN 0 ELSE (temperature_avg - ma_temp) / sd_temp END AS z_temp,
+    CASE WHEN sd_cold = 0 OR sd_cold IS NULL THEN 0 ELSE (cold_pressure_avg - ma_cold) / sd_cold END AS z_cold,
+    CASE WHEN sd_hot = 0 OR sd_hot IS NULL THEN 0 ELSE (hot_pressure_avg - ma_hot) / sd_hot END AS z_hot
+FROM rolling_window
+ORDER BY report_date, sensor_id;
+-----------------
+)
+2026-02-24 00:00:47,082 - duck - INFO - Completed: query - Duration: 0.1249s
+2026-02-24 00:00:47,095 - query_functions - INFO - Statistical features extracted. Rows: 104190
+2026-02-24 00:00:47,095 - query_functions - INFO - Training Isolation Forest Model...
+2026-02-24 00:00:52,079 - query_functions - INFO - Analysis Complete. Global Anomalies Detected: 5210
+2026-02-24 00:00:52,079 - query_functions - INFO - Results saved to data/anomalies_powerbi.csv
+2026-02-24 00:00:52,096 - __main__ - INFO - Completed: main - Duration: 8.2680s
+2026-02-24 02:04:57,235 - __main__ - INFO - 🚀 Starting: main(
+    
+)
+2026-02-24 02:04:57,235 - __main__ - INFO - Starting ATMS Data Analysis Application
+2026-02-24 02:04:57,246 - __main__ - INFO - Registering device data...
+2026-02-24 02:04:57,247 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7f8a1656f4d0>, 'time_in_level_device', 'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:04:57,247 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:04:57,331 - duck - INFO - Completed: load_data - Duration: 0.0844s
+2026-02-24 02:04:57,334 - duck - INFO - Completed: register_dataframe - Duration: 0.0875s
+2026-02-24 02:04:57,334 - __main__ - INFO - Registering sensor data...
+2026-02-24 02:04:57,334 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7f8a1656f4d0>, 'time_in_level_sensor', 'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:04:57,335 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:05:00,396 - duck - INFO - Completed: load_data - Duration: 3.0613s
+2026-02-24 02:05:00,404 - duck - INFO - Completed: register_dataframe - Duration: 3.0699s
+2026-02-24 02:05:00,405 - __main__ - INFO - Performing comprehensive fleet health analysis...
+2026-02-24 02:05:00,405 - query_functions - INFO - Generating Sensor/Wheel Health Report (2023-01-01 to 2023-12-31)...
+2026-02-24 02:05:00,414 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f8a1656f4d0>, 
+--- SQL QUERY ---
+WITH total_fleet AS (
+
+    SELECT COUNT(DISTINCT sensor_id) AS total_fleet_count
+    FROM time_in_level_sensor
+),
+daily_stats AS (
+    SELECT
+        report_start_at::DATE AS report_date,
+        COUNT(DISTINCT sensor_id) AS active_sensors,
+        (SELECT total_fleet_count FROM total_fleet) AS total_sensors
+    FROM time_in_level_sensor
+    WHERE transmitting_dur > 0
+      AND report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+    GROUP BY 1
+)
+SELECT
+    *,
+    ROUND((active_sensors::FLOAT / total_sensors) * 100, 2) AS availability_pct,
+    STRFTIME(report_date, '%Y-%m') AS month_year
+FROM daily_stats
+ORDER BY report_date;
+-----------------
+)
+2026-02-24 02:05:00,432 - duck - INFO - Completed: query - Duration: 0.0180s
+2026-02-24 02:05:00,434 - query_functions - INFO - Overall Sensor Availability: 62.34%
+2026-02-24 02:05:00,436 - __main__ - INFO - Performing comprehensive device health analysis...
+2026-02-24 02:05:00,436 - query_functions - INFO - Generating Device (Hub) Connectivity Report (2023-01-01 to 2023-12-31)...
+2026-02-24 02:05:00,443 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f8a1656f4d0>, 
+--- SQL QUERY ---
+SELECT
+    device_id,
+    vehicle_id,
+
+    AVG(transmitting_dur) AS avg_transmit_sec,
+    AVG(not_transmitting_dur) AS avg_silence_sec,
+
+    ROUND(
+        SUM(transmitting_dur)::FLOAT /
+        NULLIF(SUM(transmitting_dur + not_transmitting_dur), 0) * 100
+    , 2) AS connectivity_efficiency_pct,
+
+    SUM(CASE WHEN transmission_level = 0 THEN 1 ELSE 0 END) AS days_poor_coverage,
+    SUM(CASE WHEN transmission_level = 1 THEN 1 ELSE 0 END) AS days_partial_coverage,
+    SUM(CASE WHEN transmission_level = 2 THEN 1 ELSE 0 END) AS days_optimal_coverage
+FROM time_in_level_device
+WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+GROUP BY 1, 2
+ORDER BY connectivity_efficiency_pct ASC;
+-----------------
+)
+2026-02-24 02:05:00,448 - duck - INFO - Completed: query - Duration: 0.0050s
+2026-02-24 02:05:00,454 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f8a1656f4d0>, 
+--- SQL QUERY ---
+SELECT
+    report_start_at::DATE AS report_date,
+
+
+    COUNT(DISTINCT device_id) AS total_devices,
+
+
+    SUM(CASE WHEN vehicle_out_of_service > 0 THEN 1 ELSE 0 END) AS vehicles_out_of_service,
+    SUM(CASE WHEN vehicle_maintenance > 0 THEN 1 ELSE 0 END) AS vehicles_in_maintenance,
+
+
+    SUM(CASE WHEN vehicle_out_of_service = 0 AND vehicle_maintenance = 0 THEN 1 ELSE 0 END) AS operational_fleet
+
+FROM time_in_level_device
+WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+GROUP BY 1
+ORDER BY report_date;
+-----------------
+)
+2026-02-24 02:05:00,460 - duck - INFO - Completed: query - Duration: 0.0055s
+2026-02-24 02:05:00,461 - query_functions - INFO - Device (Hub) Stats generated.
+2026-02-24 02:05:00,461 - __main__ - INFO - Performing comprehensive anomaly detection...
+2026-02-24 02:05:00,461 - query_functions - INFO - Starting Comprehensive Anomaly Detection (2023-01-01 to 2023-12-31)...
+2026-02-24 02:05:00,479 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f8a1656f4d0>, 
+--- SQL QUERY ---
+WITH daily_metrics AS (
+    SELECT
+        id,
+        report_start_at::DATE AS report_date,
+        sensor_id,
+        vehicle_id,
+        wheel_position,
+
+
+        temperature_avg,
+        cold_pressure_avg,
+        hot_pressure_avg,
+
+
+        (COALESCE(level_3_high_temperature_dur + (level_2_high_temperature_dur * 0.75), 0) + COALESCE(level_3_low_temperature_dur + (level_2_low_temperature_dur * 0.75), 0)) AS crit_temp_dur,
+        (COALESCE(level_3_high_cold_pressure_dur + (level_2_high_cold_pressure_dur * 0.75), 0) + COALESCE(level_3_low_cold_pressure_dur + (level_2_low_cold_pressure_dur * 0.75), 0)) AS crit_cold_dur,
+        (COALESCE(level_3_high_hot_pressure_dur + (level_2_high_hot_pressure_dur * 0.75), 0) + COALESCE(level_3_low_hot_pressure_dur + (level_2_low_hot_pressure_dur * 0.75), 0)) AS crit_hot_dur
+
+    FROM time_in_level_sensor
+    WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+),
+
+rolling_window AS (
+    SELECT
+        *,
+
+        AVG(temperature_avg) OVER w AS ma_temp,
+        STDDEV(temperature_avg) OVER w AS sd_temp,
+
+
+        AVG(cold_pressure_avg) OVER w AS ma_cold,
+        STDDEV(cold_pressure_avg) OVER w AS sd_cold,
+
+
+        AVG(hot_pressure_avg) OVER w AS ma_hot,
+        STDDEV(hot_pressure_avg) OVER w AS sd_hot
+
+    FROM daily_metrics
+    WINDOW w AS (PARTITION BY sensor_id ORDER BY report_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)
+)
+
+SELECT
+    *,
+
+    CASE WHEN sd_temp = 0 OR sd_temp IS NULL THEN 0 ELSE (temperature_avg - ma_temp) / sd_temp END AS z_temp,
+    CASE WHEN sd_cold = 0 OR sd_cold IS NULL THEN 0 ELSE (cold_pressure_avg - ma_cold) / sd_cold END AS z_cold,
+    CASE WHEN sd_hot = 0 OR sd_hot IS NULL THEN 0 ELSE (hot_pressure_avg - ma_hot) / sd_hot END AS z_hot
+FROM rolling_window
+ORDER BY report_date, sensor_id;
+-----------------
+)
+2026-02-24 02:05:00,595 - duck - INFO - Completed: query - Duration: 0.1159s
+2026-02-24 02:05:00,608 - query_functions - INFO - Statistical features extracted. Rows: 104190
+2026-02-24 02:05:00,608 - query_functions - INFO - Training Isolation Forest Model...
+2026-02-24 02:05:05,326 - query_functions - INFO - Analysis Complete. Global Anomalies Detected: 5210
+2026-02-24 02:05:05,326 - query_functions - INFO - Results saved to output/anomalies_from_sensors.csv
+2026-02-24 02:05:05,336 - __main__ - INFO - Completed: main - Duration: 8.1001s
+2026-02-24 02:33:50,260 - __main__ - INFO - 🚀 Starting: main(
+    
+)
+2026-02-24 02:33:50,261 - __main__ - INFO - Starting ATMS Data Analysis Application
+2026-02-24 02:33:50,272 - __main__ - INFO - Registering device data...
+2026-02-24 02:33:50,272 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7fdcb5bc3380>, 'time_in_level_device', 'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:33:50,272 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:33:50,358 - duck - INFO - Completed: load_data - Duration: 0.0856s
+2026-02-24 02:33:50,361 - duck - INFO - Completed: register_dataframe - Duration: 0.0889s
+2026-02-24 02:33:50,361 - __main__ - INFO - Registering sensor data...
+2026-02-24 02:33:50,361 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7fdcb5bc3380>, 'time_in_level_sensor', 'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:33:50,362 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:33:53,375 - duck - INFO - Completed: load_data - Duration: 3.0135s
+2026-02-24 02:33:53,384 - duck - INFO - Completed: register_dataframe - Duration: 3.0225s
+2026-02-24 02:33:53,384 - __main__ - INFO - Performing comprehensive fleet health analysis...
+2026-02-24 02:33:53,384 - query_functions - INFO - Generating Sensor/Wheel Health Report (2023-01-01 to 2023-12-31)...
+2026-02-24 02:33:53,395 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7fdcb5bc3380>, 
+--- SQL QUERY ---
+WITH total_fleet AS (
+
+    SELECT COUNT(DISTINCT sensor_id) AS total_fleet_count
+    FROM time_in_level_sensor
+),
+daily_stats AS (
+    SELECT
+        report_start_at::DATE AS report_date,
+        COUNT(DISTINCT sensor_id) AS active_sensors,
+        (SELECT total_fleet_count FROM total_fleet) AS total_sensors
+    FROM time_in_level_sensor
+    WHERE transmitting_dur > 0
+      AND report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+    GROUP BY 1
+)
+SELECT
+    *,
+    ROUND((active_sensors::FLOAT / total_sensors) * 100, 2) AS availability_pct,
+    STRFTIME(report_date, '%Y-%m') AS month_year
+FROM daily_stats
+ORDER BY report_date;
+-----------------
+)
+2026-02-24 02:33:53,418 - duck - INFO - Completed: query - Duration: 0.0232s
+2026-02-24 02:33:53,420 - query_functions - INFO - Overall Sensor Availability: 62.34%
+2026-02-24 02:33:53,422 - __main__ - INFO - Performing comprehensive device health analysis...
+2026-02-24 02:33:53,422 - query_functions - INFO - Generating Device (Hub) Connectivity Report (2023-01-01 to 2023-12-31)...
+2026-02-24 02:33:53,429 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7fdcb5bc3380>, 
+--- SQL QUERY ---
+SELECT
+    device_id,
+    vehicle_id,
+
+    AVG(transmitting_dur) AS avg_transmit_sec,
+    AVG(not_transmitting_dur) AS avg_silence_sec,
+
+    ROUND(
+        SUM(transmitting_dur)::FLOAT /
+        NULLIF(SUM(transmitting_dur + not_transmitting_dur), 0) * 100
+    , 2) AS connectivity_efficiency_pct,
+
+    SUM(CASE WHEN transmission_level = 0 THEN 1 ELSE 0 END) AS days_poor_coverage,
+    SUM(CASE WHEN transmission_level = 1 THEN 1 ELSE 0 END) AS days_partial_coverage,
+    SUM(CASE WHEN transmission_level = 2 THEN 1 ELSE 0 END) AS days_optimal_coverage
+FROM time_in_level_device
+WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+GROUP BY 1, 2
+ORDER BY connectivity_efficiency_pct ASC;
+-----------------
+)
+2026-02-24 02:33:53,434 - duck - INFO - Completed: query - Duration: 0.0054s
+2026-02-24 02:33:53,441 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7fdcb5bc3380>, 
+--- SQL QUERY ---
+SELECT
+    report_start_at::DATE AS report_date,
+
+
+    COUNT(DISTINCT device_id) AS total_devices,
+
+
+    SUM(CASE WHEN vehicle_out_of_service > 0 THEN 1 ELSE 0 END) AS vehicles_out_of_service,
+    SUM(CASE WHEN vehicle_maintenance > 0 THEN 1 ELSE 0 END) AS vehicles_in_maintenance,
+
+
+    SUM(CASE WHEN vehicle_out_of_service = 0 AND vehicle_maintenance = 0 THEN 1 ELSE 0 END) AS operational_fleet
+
+FROM time_in_level_device
+WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+GROUP BY 1
+ORDER BY report_date;
+-----------------
+)
+2026-02-24 02:33:53,448 - duck - INFO - Completed: query - Duration: 0.0066s
+2026-02-24 02:33:53,449 - query_functions - INFO - Device (Hub) Stats generated.
+2026-02-24 02:33:53,449 - __main__ - INFO - Performing comprehensive anomaly detection...
+2026-02-24 02:33:53,449 - query_functions - INFO - Starting Comprehensive Anomaly Detection (2023-01-01 to 2023-12-31)...
+2026-02-24 02:33:53,470 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7fdcb5bc3380>, 
+--- SQL QUERY ---
+WITH daily_metrics AS (
+    SELECT
+        id,
+        report_start_at::DATE AS report_date,
+        sensor_id,
+        vehicle_id,
+        wheel_position,
+
+
+        temperature_avg,
+        cold_pressure_avg,
+        hot_pressure_avg,
+
+
+        (COALESCE(level_3_high_temperature_dur + (level_2_high_temperature_dur * 0.75), 0) + COALESCE(level_3_low_temperature_dur + (level_2_low_temperature_dur * 0.75), 0)) AS crit_temp_dur,
+        (COALESCE(level_3_high_cold_pressure_dur + (level_2_high_cold_pressure_dur * 0.75), 0) + COALESCE(level_3_low_cold_pressure_dur + (level_2_low_cold_pressure_dur * 0.75), 0)) AS crit_cold_dur,
+        (COALESCE(level_3_high_hot_pressure_dur + (level_2_high_hot_pressure_dur * 0.75), 0) + COALESCE(level_3_low_hot_pressure_dur + (level_2_low_hot_pressure_dur * 0.75), 0)) AS crit_hot_dur
+
+    FROM time_in_level_sensor
+    WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+),
+
+rolling_window AS (
+    SELECT
+        *,
+
+        AVG(temperature_avg) OVER w AS ma_temp,
+        STDDEV(temperature_avg) OVER w AS sd_temp,
+
+
+        AVG(cold_pressure_avg) OVER w AS ma_cold,
+        STDDEV(cold_pressure_avg) OVER w AS sd_cold,
+
+
+        AVG(hot_pressure_avg) OVER w AS ma_hot,
+        STDDEV(hot_pressure_avg) OVER w AS sd_hot,
+
+        AVG(crit_temp_dur) OVER w AS ma_dur_temp,
+        STDDEV(crit_temp_dur) OVER w AS sd_dur_temp
+
+    FROM daily_metrics
+    WINDOW w AS (PARTITION BY sensor_id ORDER BY report_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)
+)
+
+SELECT
+    *,
+
+    CASE WHEN sd_temp = 0 OR sd_temp IS NULL THEN 0 ELSE (temperature_avg - ma_temp) / sd_temp END AS z_temp,
+    CASE WHEN sd_cold = 0 OR sd_cold IS NULL THEN 0 ELSE (cold_pressure_avg - ma_cold) / sd_cold END AS z_cold,
+    CASE WHEN sd_hot = 0 OR sd_hot IS NULL THEN 0 ELSE (hot_pressure_avg - ma_hot) / sd_hot END AS z_hot,
+
+    CASE WHEN sd_dur_temp = 0 OR sd_dur_temp IS NULL THEN 0 ELSE (crit_temp_dur - ma_dur_temp) / sd_dur_temp END AS z_dur_temp
+FROM rolling_window
+ORDER BY report_date, sensor_id;
+-----------------
+)
+2026-02-24 02:33:53,620 - duck - INFO - Completed: query - Duration: 0.1499s
+2026-02-24 02:33:53,636 - query_functions - INFO - Statistical features extracted. Rows: 104190
+2026-02-24 02:33:53,636 - query_functions - INFO - Training Isolation Forest Model...
+2026-02-24 02:34:00,950 - query_functions - INFO - Analysis Complete. Global Anomalies Detected: 4168
+2026-02-24 02:34:00,950 - query_functions - INFO - Results saved to output/anomalies_from_sensors.csv
+2026-02-24 02:34:00,951 - __main__ - ERROR - Error in main after 10.6901s: KeyError: "['is_stat_anomaly', 'anomaly_reason'] not in index"
+Traceback (most recent call last):
+  File "/home/quezandoc/Documents/BMST/Aplliance/case_study_atms/logging_decorator.py", line 57, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/quezandoc/Documents/BMST/Aplliance/case_study_atms/app.py", line 56, in main
+    sensor_anomaly_detection(analyzer, START_DATE, END_DATE)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/quezandoc/Documents/BMST/Aplliance/case_study_atms/query_functions.py", line 159, in sensor_anomaly_detection
+    return df[['id', 'report_date', 'sensor_id', 'vehicle_id', 'wheel_position', 'temperature_avg', 'cold_pressure_avg', 'hot_pressure_avg', 'is_stat_anomaly', 'is_ml_anomaly', 'is_anomaly_global', 'anomaly_reason']]
+           ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/quezandoc/Documents/BMST/Aplliance/case_study_atms/.v/lib/python3.13/site-packages/pandas/core/frame.py", line 4384, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/quezandoc/Documents/BMST/Aplliance/case_study_atms/.v/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 6302, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/quezandoc/Documents/BMST/Aplliance/case_study_atms/.v/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 6355, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['is_stat_anomaly', 'anomaly_reason'] not in index"
+2026-02-24 02:35:02,008 - __main__ - INFO - 🚀 Starting: main(
+    
+)
+2026-02-24 02:35:02,008 - __main__ - INFO - Starting ATMS Data Analysis Application
+2026-02-24 02:35:02,019 - __main__ - INFO - Registering device data...
+2026-02-24 02:35:02,019 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7fa778ce7380>, 'time_in_level_device', 'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:35:02,019 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:35:02,105 - duck - INFO - Completed: load_data - Duration: 0.0850s
+2026-02-24 02:35:02,108 - duck - INFO - Completed: register_dataframe - Duration: 0.0882s
+2026-02-24 02:35:02,108 - __main__ - INFO - Registering sensor data...
+2026-02-24 02:35:02,108 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7fa778ce7380>, 'time_in_level_sensor', 'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:35:02,108 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 02:35:05,065 - duck - INFO - Completed: load_data - Duration: 2.9570s
+2026-02-24 02:35:05,074 - duck - INFO - Completed: register_dataframe - Duration: 2.9659s
+2026-02-24 02:35:05,074 - __main__ - INFO - Performing comprehensive fleet health analysis...
+2026-02-24 02:35:05,074 - query_functions - INFO - Generating Sensor/Wheel Health Report (2023-01-01 to 2023-12-31)...
+2026-02-24 02:35:05,084 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7fa778ce7380>, 
+--- SQL QUERY ---
+WITH total_fleet AS (
+
+    SELECT COUNT(DISTINCT sensor_id) AS total_fleet_count
+    FROM time_in_level_sensor
+),
+daily_stats AS (
+    SELECT
+        report_start_at::DATE AS report_date,
+        COUNT(DISTINCT sensor_id) AS active_sensors,
+        (SELECT total_fleet_count FROM total_fleet) AS total_sensors
+    FROM time_in_level_sensor
+    WHERE transmitting_dur > 0
+      AND report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+    GROUP BY 1
+)
+SELECT
+    *,
+    ROUND((active_sensors::FLOAT / total_sensors) * 100, 2) AS availability_pct,
+    STRFTIME(report_date, '%Y-%m') AS month_year
+FROM daily_stats
+ORDER BY report_date;
+-----------------
+)
+2026-02-24 02:35:05,102 - duck - INFO - Completed: query - Duration: 0.0182s
+2026-02-24 02:35:05,104 - query_functions - INFO - Overall Sensor Availability: 62.34%
+2026-02-24 02:35:05,106 - __main__ - INFO - Performing comprehensive device health analysis...
+2026-02-24 02:35:05,106 - query_functions - INFO - Generating Device (Hub) Connectivity Report (2023-01-01 to 2023-12-31)...
+2026-02-24 02:35:05,112 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7fa778ce7380>, 
+--- SQL QUERY ---
+SELECT
+    device_id,
+    vehicle_id,
+
+    AVG(transmitting_dur) AS avg_transmit_sec,
+    AVG(not_transmitting_dur) AS avg_silence_sec,
+
+    ROUND(
+        SUM(transmitting_dur)::FLOAT /
+        NULLIF(SUM(transmitting_dur + not_transmitting_dur), 0) * 100
+    , 2) AS connectivity_efficiency_pct,
+
+    SUM(CASE WHEN transmission_level = 0 THEN 1 ELSE 0 END) AS days_poor_coverage,
+    SUM(CASE WHEN transmission_level = 1 THEN 1 ELSE 0 END) AS days_partial_coverage,
+    SUM(CASE WHEN transmission_level = 2 THEN 1 ELSE 0 END) AS days_optimal_coverage
+FROM time_in_level_device
+WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+GROUP BY 1, 2
+ORDER BY connectivity_efficiency_pct ASC;
+-----------------
+)
+2026-02-24 02:35:05,118 - duck - INFO - Completed: query - Duration: 0.0052s
+2026-02-24 02:35:05,124 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7fa778ce7380>, 
+--- SQL QUERY ---
+SELECT
+    report_start_at::DATE AS report_date,
+
+
+    COUNT(DISTINCT device_id) AS total_devices,
+
+
+    SUM(CASE WHEN vehicle_out_of_service > 0 THEN 1 ELSE 0 END) AS vehicles_out_of_service,
+    SUM(CASE WHEN vehicle_maintenance > 0 THEN 1 ELSE 0 END) AS vehicles_in_maintenance,
+
+
+    SUM(CASE WHEN vehicle_out_of_service = 0 AND vehicle_maintenance = 0 THEN 1 ELSE 0 END) AS operational_fleet
+
+FROM time_in_level_device
+WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+GROUP BY 1
+ORDER BY report_date;
+-----------------
+)
+2026-02-24 02:35:05,130 - duck - INFO - Completed: query - Duration: 0.0060s
+2026-02-24 02:35:05,131 - query_functions - INFO - Device (Hub) Stats generated.
+2026-02-24 02:35:05,132 - __main__ - INFO - Performing comprehensive anomaly detection...
+2026-02-24 02:35:05,132 - query_functions - INFO - Starting Comprehensive Anomaly Detection (2023-01-01 to 2023-12-31)...
+2026-02-24 02:35:05,152 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7fa778ce7380>, 
+--- SQL QUERY ---
+WITH daily_metrics AS (
+    SELECT
+        id,
+        report_start_at::DATE AS report_date,
+        sensor_id,
+        vehicle_id,
+        wheel_position,
+
+
+        temperature_avg,
+        cold_pressure_avg,
+        hot_pressure_avg,
+
+
+        (COALESCE(level_3_high_temperature_dur + (level_2_high_temperature_dur * 0.75), 0) + COALESCE(level_3_low_temperature_dur + (level_2_low_temperature_dur * 0.75), 0)) AS crit_temp_dur,
+        (COALESCE(level_3_high_cold_pressure_dur + (level_2_high_cold_pressure_dur * 0.75), 0) + COALESCE(level_3_low_cold_pressure_dur + (level_2_low_cold_pressure_dur * 0.75), 0)) AS crit_cold_dur,
+        (COALESCE(level_3_high_hot_pressure_dur + (level_2_high_hot_pressure_dur * 0.75), 0) + COALESCE(level_3_low_hot_pressure_dur + (level_2_low_hot_pressure_dur * 0.75), 0)) AS crit_hot_dur
+
+    FROM time_in_level_sensor
+    WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+),
+
+rolling_window AS (
+    SELECT
+        *,
+
+        AVG(temperature_avg) OVER w AS ma_temp,
+        STDDEV(temperature_avg) OVER w AS sd_temp,
+
+
+        AVG(cold_pressure_avg) OVER w AS ma_cold,
+        STDDEV(cold_pressure_avg) OVER w AS sd_cold,
+
+
+        AVG(hot_pressure_avg) OVER w AS ma_hot,
+        STDDEV(hot_pressure_avg) OVER w AS sd_hot,
+
+        AVG(crit_temp_dur) OVER w AS ma_dur_temp,
+        STDDEV(crit_temp_dur) OVER w AS sd_dur_temp
+
+    FROM daily_metrics
+    WINDOW w AS (PARTITION BY sensor_id ORDER BY report_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)
+)
+
+SELECT
+    *,
+
+    CASE WHEN sd_temp = 0 OR sd_temp IS NULL THEN 0 ELSE (temperature_avg - ma_temp) / sd_temp END AS z_temp,
+    CASE WHEN sd_cold = 0 OR sd_cold IS NULL THEN 0 ELSE (cold_pressure_avg - ma_cold) / sd_cold END AS z_cold,
+    CASE WHEN sd_hot = 0 OR sd_hot IS NULL THEN 0 ELSE (hot_pressure_avg - ma_hot) / sd_hot END AS z_hot,
+
+    CASE WHEN sd_dur_temp = 0 OR sd_dur_temp IS NULL THEN 0 ELSE (crit_temp_dur - ma_dur_temp) / sd_dur_temp END AS z_dur_temp
+FROM rolling_window
+ORDER BY report_date, sensor_id;
+-----------------
+)
+2026-02-24 02:35:05,291 - duck - INFO - Completed: query - Duration: 0.1394s
+2026-02-24 02:35:05,308 - query_functions - INFO - Statistical features extracted. Rows: 104190
+2026-02-24 02:35:05,308 - query_functions - INFO - Training Isolation Forest Model...
+2026-02-24 02:35:10,061 - query_functions - INFO - Analysis Complete. Global Anomalies Detected: 4168
+2026-02-24 02:35:10,073 - __main__ - INFO - Completed: main - Duration: 8.0650s
+2026-02-24 04:01:59,200 - __main__ - INFO - 🚀 Starting: main(
+    
+)
+2026-02-24 04:01:59,201 - __main__ - INFO - Starting ATMS Data Analysis Application
+2026-02-24 04:01:59,213 - __main__ - INFO - Registering device data...
+2026-02-24 04:01:59,214 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7f57ae8bf380>, 'time_in_level_device', 'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 04:01:59,214 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 04:01:59,322 - duck - INFO - Completed: load_data - Duration: 0.1079s
+2026-02-24 04:01:59,326 - duck - INFO - Completed: register_dataframe - Duration: 0.1120s
+2026-02-24 04:01:59,326 - __main__ - INFO - Registering sensor data...
+2026-02-24 04:01:59,326 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7f57ae8bf380>, 'time_in_level_sensor', 'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 04:01:59,326 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 04:02:03,137 - duck - INFO - Completed: load_data - Duration: 3.8102s
+2026-02-24 04:02:03,149 - duck - INFO - Completed: register_dataframe - Duration: 3.8223s
+2026-02-24 04:02:03,149 - __main__ - INFO - Performing comprehensive fleet health analysis...
+2026-02-24 04:02:03,149 - query_functions - INFO - Generating Sensor/Wheel Health Report (2023-01-01 to 2023-12-31)...
+2026-02-24 04:02:03,163 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f57ae8bf380>, 
+--- SQL QUERY ---
+WITH total_fleet AS (
+
+    SELECT COUNT(DISTINCT sensor_id) AS total_fleet_count
+    FROM time_in_level_sensor
+),
+daily_stats AS (
+    SELECT
+        report_start_at::DATE AS report_date,
+        COUNT(DISTINCT sensor_id) AS active_sensors,
+        (SELECT total_fleet_count FROM total_fleet) AS total_sensors
+    FROM time_in_level_sensor
+    WHERE transmitting_dur > 0
+      AND report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+    GROUP BY 1
+)
+SELECT
+    *,
+    ROUND((active_sensors::FLOAT / total_sensors) * 100, 2) AS availability_pct,
+    STRFTIME(report_date, '%Y-%m') AS month_year
+FROM daily_stats
+ORDER BY report_date;
+-----------------
+)
+2026-02-24 04:02:03,192 - duck - INFO - Completed: query - Duration: 0.0292s
+2026-02-24 04:02:03,194 - query_functions - INFO - Overall Sensor Availability: 62.34%
+2026-02-24 04:02:03,197 - __main__ - INFO - Performing comprehensive device health analysis...
+2026-02-24 04:02:03,198 - query_functions - INFO - Generating Device (Hub) Connectivity Report (2023-01-01 to 2023-12-31)...
+2026-02-24 04:02:03,211 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f57ae8bf380>, 
+--- SQL QUERY ---
+SELECT
+    device_id,
+    vehicle_id,
+
+    AVG(transmitting_dur) AS avg_transmit_sec,
+    AVG(not_transmitting_dur) AS avg_silence_sec,
+
+    ROUND(
+        SUM(transmitting_dur)::FLOAT /
+        NULLIF(SUM(transmitting_dur + not_transmitting_dur), 0) * 100
+    , 2) AS connectivity_efficiency_pct,
+
+    SUM(CASE WHEN transmission_level = 0 THEN 1 ELSE 0 END) AS days_poor_coverage,
+    SUM(CASE WHEN transmission_level = 1 THEN 1 ELSE 0 END) AS days_partial_coverage,
+    SUM(CASE WHEN transmission_level = 2 THEN 1 ELSE 0 END) AS days_optimal_coverage
+FROM time_in_level_device
+WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+GROUP BY 1, 2
+ORDER BY connectivity_efficiency_pct ASC;
+-----------------
+)
+2026-02-24 04:02:03,219 - duck - INFO - Completed: query - Duration: 0.0081s
+2026-02-24 04:02:03,232 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f57ae8bf380>, 
+--- SQL QUERY ---
+SELECT
+    report_start_at::DATE AS report_date,
+
+
+    COUNT(DISTINCT device_id) AS total_devices,
+
+
+    SUM(CASE WHEN vehicle_out_of_service > 0 THEN 1 ELSE 0 END) AS vehicles_out_of_service,
+    SUM(CASE WHEN vehicle_maintenance > 0 THEN 1 ELSE 0 END) AS vehicles_in_maintenance,
+
+
+    SUM(CASE WHEN vehicle_out_of_service = 0 AND vehicle_maintenance = 0 THEN 1 ELSE 0 END) AS operational_fleet
+
+FROM time_in_level_device
+WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+GROUP BY 1
+ORDER BY report_date;
+-----------------
+)
+2026-02-24 04:02:03,241 - duck - INFO - Completed: query - Duration: 0.0089s
+2026-02-24 04:02:03,243 - query_functions - INFO - Device (Hub) Stats generated.
+2026-02-24 04:02:03,244 - __main__ - INFO - Performing comprehensive anomaly detection...
+2026-02-24 04:02:03,244 - query_functions - INFO - Starting Comprehensive Anomaly Detection (2023-01-01 to 2023-12-31)...
+2026-02-24 04:02:03,276 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f57ae8bf380>, 
+--- SQL QUERY ---
+WITH daily_metrics AS (
+    SELECT
+        id,
+        report_start_at::DATE AS report_date,
+        sensor_id,
+        vehicle_id,
+        wheel_position,
+
+
+        temperature_avg,
+        cold_pressure_avg,
+        hot_pressure_avg,
+
+
+        (COALESCE(level_3_high_temperature_dur + (level_2_high_temperature_dur * 0.75), 0) + COALESCE(level_3_low_temperature_dur + (level_2_low_temperature_dur * 0.75), 0)) AS crit_temp_dur,
+        (COALESCE(level_3_high_cold_pressure_dur + (level_2_high_cold_pressure_dur * 0.75), 0) + COALESCE(level_3_low_cold_pressure_dur + (level_2_low_cold_pressure_dur * 0.75), 0)) AS crit_cold_dur,
+        (COALESCE(level_3_high_hot_pressure_dur + (level_2_high_hot_pressure_dur * 0.75), 0) + COALESCE(level_3_low_hot_pressure_dur + (level_2_low_hot_pressure_dur * 0.75), 0)) AS crit_hot_dur
+
+    FROM time_in_level_sensor
+    WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+),
+
+rolling_window AS (
+    SELECT
+        *,
+
+        AVG(temperature_avg) OVER w AS ma_temp,
+        STDDEV(temperature_avg) OVER w AS sd_temp,
+
+
+        AVG(cold_pressure_avg) OVER w AS ma_cold,
+        STDDEV(cold_pressure_avg) OVER w AS sd_cold,
+
+
+        AVG(hot_pressure_avg) OVER w AS ma_hot,
+        STDDEV(hot_pressure_avg) OVER w AS sd_hot,
+
+        AVG(crit_temp_dur) OVER w AS ma_dur_temp,
+        STDDEV(crit_temp_dur) OVER w AS sd_dur_temp
+
+    FROM daily_metrics
+    WINDOW w AS (PARTITION BY sensor_id ORDER BY report_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)
+)
+
+SELECT
+    *,
+
+    CASE WHEN sd_temp = 0 OR sd_temp IS NULL THEN 0 ELSE (temperature_avg - ma_temp) / sd_temp END AS z_temp,
+    CASE WHEN sd_cold = 0 OR sd_cold IS NULL THEN 0 ELSE (cold_pressure_avg - ma_cold) / sd_cold END AS z_cold,
+    CASE WHEN sd_hot = 0 OR sd_hot IS NULL THEN 0 ELSE (hot_pressure_avg - ma_hot) / sd_hot END AS z_hot,
+
+    CASE WHEN sd_dur_temp = 0 OR sd_dur_temp IS NULL THEN 0 ELSE (crit_temp_dur - ma_dur_temp) / sd_dur_temp END AS z_dur_temp
+FROM rolling_window
+ORDER BY report_date, sensor_id;
+-----------------
+)
+2026-02-24 04:02:03,457 - duck - INFO - Completed: query - Duration: 0.1802s
+2026-02-24 04:02:03,476 - query_functions - INFO - Statistical features extracted. Rows: 104190
+2026-02-24 04:02:03,476 - query_functions - INFO - Training Isolation Forest Model...
+2026-02-24 04:02:09,113 - query_functions - INFO - Analysis Complete. Global Anomalies Detected: 4168
+2026-02-24 04:02:09,122 - __main__ - INFO - Completed: main - Duration: 9.9214s
+2026-02-24 04:50:33,490 - __main__ - INFO - 🚀 Starting: main(
+    
+)
+2026-02-24 04:50:33,490 - __main__ - INFO - Starting ATMS Data Analysis Application
+2026-02-24 04:50:33,501 - __main__ - INFO - Registering device data...
+2026-02-24 04:50:33,501 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7f95d6ab7380>, 'time_in_level_device', 'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 04:50:33,501 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_device_desc.csv', 'data/time_in_level_device.csv', 
+{
+    "id": "Int64",
+    "vehicle_id": "Int32",
+    "device_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int16"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 04:50:33,589 - duck - INFO - Completed: load_data - Duration: 0.0879s
+2026-02-24 04:50:33,592 - duck - INFO - Completed: register_dataframe - Duration: 0.0911s
+2026-02-24 04:50:33,593 - __main__ - INFO - Registering sensor data...
+2026-02-24 04:50:33,593 - duck - INFO - 🚀 Starting: register_dataframe(
+    <duck.DuckDBAnalyzer object at 0x7f95d6ab7380>, 'time_in_level_sensor', 'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 04:50:33,593 - duck - INFO - 🚀 Starting: load_data(
+    'data/time_in_level_sensor_desc.csv', 'data/time_in_level_sensor.csv', 
+{
+    "id": "Int64",
+    "sensor_id": "Int32",
+    "wheel_position": "Int32",
+    "wheel_id": "Int32",
+    "vehicle_id": "Int32",
+    "vehicle_out_of_service": "Int16",
+    "vehicle_maintenance": "Int16",
+    "sensor_priority": "Int16",
+    "sensor_type_id": "Int16",
+    "priority_order": "Int32",
+    "level_1_high_temperature_dur": "Int32",
+    "level_2_high_temperature_dur": "Int32",
+    "level_3_high_temperature_dur": "Int32",
+    "level_1_low_temperature_dur": "Int32",
+    "level_2_low_temperature_dur": "Int32",
+    "level_3_low_temperature_dur": "Int32",
+    "optimal_temperature_dur": "Int32",
+    "level_1_high_temperature_cnt": "Int32",
+    "level_2_high_temperature_cnt": "Int32",
+    "level_3_high_temperature_cnt": "Int32",
+    "level_1_low_temperature_cnt": "Int32",
+    "level_2_low_temperature_cnt": "Int32",
+    "level_3_low_temperature_cnt": "Int32",
+    "level_1_high_cold_pressure_dur": "Int32",
+    "level_2_high_cold_pressure_dur": "Int32",
+    "level_3_high_cold_pressure_dur": "Int32",
+    "level_1_low_cold_pressure_dur": "Int32",
+    "level_2_low_cold_pressure_dur": "Int32",
+    "level_3_low_cold_pressure_dur": "Int32",
+    "optimal_cold_pressure_dur": "Int32",
+    "level_1_high_cold_pressure_cnt": "Int32",
+    "level_2_high_cold_pressure_cnt": "Int32",
+    "level_3_high_cold_pressure_cnt": "Int32",
+    "level_1_low_cold_pressure_cnt": "Int32",
+    "level_2_low_cold_pressure_cnt": "Int32",
+    "level_3_low_cold_pressure_cnt": "Int32",
+    "level_1_high_hot_pressure_dur": "Int32",
+    "level_2_high_hot_pressure_dur": "Int32",
+    "level_3_high_hot_pressure_dur": "Int32",
+    "level_1_low_hot_pressure_dur": "Int32",
+    "level_2_low_hot_pressure_dur": "Int32",
+    "level_3_low_hot_pressure_dur": "Int32",
+    "optimal_hot_pressure_dur": "Int32",
+    "level_1_high_hot_pressure_cnt": "Int32",
+    "level_2_high_hot_pressure_cnt": "Int32",
+    "level_3_high_hot_pressure_cnt": "Int32",
+    "level_1_low_hot_pressure_cnt": "Int32",
+    "level_2_low_hot_pressure_cnt": "Int32",
+    "level_3_low_hot_pressure_cnt": "Int32",
+    "temperature_min": "float32",
+    "temperature_max": "float32",
+    "temperature_sd": "float32",
+    "temperature_avg": "float32",
+    "cold_pressure_min": "float32",
+    "cold_pressure_max": "float32",
+    "cold_pressure_sd": "float32",
+    "cold_pressure_avg": "float32",
+    "hot_pressure_min": "float32",
+    "hot_pressure_max": "float32",
+    "hot_pressure_sd": "float32",
+    "hot_pressure_avg": "float32",
+    "transmitting_dur": "Int32",
+    "not_transmitting_dur": "Int32",
+    "transmission_level": "Int32"
+}, ['report_start_at', 'updated_at']
+)
+2026-02-24 04:50:36,578 - duck - INFO - Completed: load_data - Duration: 2.9853s
+2026-02-24 04:50:36,587 - duck - INFO - Completed: register_dataframe - Duration: 2.9942s
+2026-02-24 04:50:36,587 - __main__ - INFO - Performing comprehensive fleet health analysis...
+2026-02-24 04:50:36,587 - query_functions - INFO - Generating Sensor/Wheel Health Report (2023-01-01 to 2023-12-31)...
+2026-02-24 04:50:36,597 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f95d6ab7380>, 
+--- SQL QUERY ---
+WITH total_fleet AS (
+
+    SELECT COUNT(DISTINCT sensor_id) AS total_fleet_count
+    FROM time_in_level_sensor
+),
+daily_stats AS (
+    SELECT
+        report_start_at::DATE AS report_date,
+        COUNT(DISTINCT sensor_id) AS active_sensors,
+        (SELECT total_fleet_count FROM total_fleet) AS total_sensors
+    FROM time_in_level_sensor
+    WHERE transmitting_dur > 0
+      AND report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+    GROUP BY 1
+)
+SELECT
+    *,
+    ROUND((active_sensors::FLOAT / total_sensors) * 100, 2) AS availability_pct,
+    STRFTIME(report_date, '%Y-%m') AS month_year
+FROM daily_stats
+ORDER BY report_date;
+-----------------
+)
+2026-02-24 04:50:36,617 - duck - INFO - Completed: query - Duration: 0.0195s
+2026-02-24 04:50:36,618 - query_functions - INFO - Overall Sensor Availability: 62.34%
+2026-02-24 04:50:36,620 - __main__ - INFO - Performing comprehensive device health analysis...
+2026-02-24 04:50:36,620 - query_functions - INFO - Generating Device (Hub) Connectivity Report (2023-01-01 to 2023-12-31)...
+2026-02-24 04:50:36,627 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f95d6ab7380>, 
+--- SQL QUERY ---
+SELECT
+    device_id,
+    vehicle_id,
+
+    AVG(transmitting_dur) AS avg_transmit_sec,
+    AVG(not_transmitting_dur) AS avg_silence_sec,
+
+    ROUND(
+        SUM(transmitting_dur)::FLOAT /
+        NULLIF(SUM(transmitting_dur + not_transmitting_dur), 0) * 100
+    , 2) AS connectivity_efficiency_pct,
+
+    SUM(CASE WHEN transmission_level = 0 THEN 1 ELSE 0 END) AS days_poor_coverage,
+    SUM(CASE WHEN transmission_level = 1 THEN 1 ELSE 0 END) AS days_partial_coverage,
+    SUM(CASE WHEN transmission_level = 2 THEN 1 ELSE 0 END) AS days_optimal_coverage
+FROM time_in_level_device
+WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+GROUP BY 1, 2
+ORDER BY connectivity_efficiency_pct ASC;
+-----------------
+)
+2026-02-24 04:50:36,632 - duck - INFO - Completed: query - Duration: 0.0052s
+2026-02-24 04:50:36,639 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f95d6ab7380>, 
+--- SQL QUERY ---
+SELECT
+    report_start_at::DATE AS report_date,
+
+
+    COUNT(DISTINCT device_id) AS total_devices,
+
+
+    SUM(CASE WHEN vehicle_out_of_service > 0 THEN 1 ELSE 0 END) AS vehicles_out_of_service,
+    SUM(CASE WHEN vehicle_maintenance > 0 THEN 1 ELSE 0 END) AS vehicles_in_maintenance,
+
+
+    SUM(CASE WHEN vehicle_out_of_service = 0 AND vehicle_maintenance = 0 THEN 1 ELSE 0 END) AS operational_fleet
+
+FROM time_in_level_device
+WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+GROUP BY 1
+ORDER BY report_date;
+-----------------
+)
+2026-02-24 04:50:36,645 - duck - INFO - Completed: query - Duration: 0.0060s
+2026-02-24 04:50:36,646 - query_functions - INFO - Device (Hub) Stats generated.
+2026-02-24 04:50:36,646 - __main__ - INFO - Performing comprehensive anomaly detection...
+2026-02-24 04:50:36,646 - query_functions - INFO - Starting Comprehensive Anomaly Detection (2023-01-01 to 2023-12-31)...
+2026-02-24 04:50:36,667 - duck - INFO - 🚀 Starting: query(
+    <duck.DuckDBAnalyzer object at 0x7f95d6ab7380>, 
+--- SQL QUERY ---
+WITH daily_metrics AS (
+    SELECT
+        id,
+        report_start_at::DATE AS report_date,
+        sensor_id,
+        vehicle_id,
+        wheel_position,
+
+
+        temperature_avg,
+        cold_pressure_avg,
+        hot_pressure_avg,
+
+
+        (COALESCE(level_3_high_temperature_dur + (level_2_high_temperature_dur * 0.75), 0) + COALESCE(level_3_low_temperature_dur + (level_2_low_temperature_dur * 0.75), 0)) AS crit_temp_dur,
+        (COALESCE(level_3_high_cold_pressure_dur + (level_2_high_cold_pressure_dur * 0.75), 0) + COALESCE(level_3_low_cold_pressure_dur + (level_2_low_cold_pressure_dur * 0.75), 0)) AS crit_cold_dur,
+        (COALESCE(level_3_high_hot_pressure_dur + (level_2_high_hot_pressure_dur * 0.75), 0) + COALESCE(level_3_low_hot_pressure_dur + (level_2_low_hot_pressure_dur * 0.75), 0)) AS crit_hot_dur
+
+    FROM time_in_level_sensor
+    WHERE report_start_at BETWEEN '2023-01-01' AND '2023-12-31'
+),
+
+rolling_window AS (
+    SELECT
+        *,
+
+        AVG(temperature_avg) OVER w AS ma_temp,
+        STDDEV(temperature_avg) OVER w AS sd_temp,
+
+
+        AVG(cold_pressure_avg) OVER w AS ma_cold,
+        STDDEV(cold_pressure_avg) OVER w AS sd_cold,
+
+
+        AVG(hot_pressure_avg) OVER w AS ma_hot,
+        STDDEV(hot_pressure_avg) OVER w AS sd_hot,
+
+        AVG(crit_temp_dur) OVER w AS ma_dur_temp,
+        STDDEV(crit_temp_dur) OVER w AS sd_dur_temp
+
+    FROM daily_metrics
+    WINDOW w AS (PARTITION BY sensor_id ORDER BY report_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)
+)
+
+SELECT
+    *,
+
+    CASE WHEN sd_temp = 0 OR sd_temp IS NULL THEN 0 ELSE (temperature_avg - ma_temp) / sd_temp END AS z_temp,
+    CASE WHEN sd_cold = 0 OR sd_cold IS NULL THEN 0 ELSE (cold_pressure_avg - ma_cold) / sd_cold END AS z_cold,
+    CASE WHEN sd_hot = 0 OR sd_hot IS NULL THEN 0 ELSE (hot_pressure_avg - ma_hot) / sd_hot END AS z_hot,
+
+    CASE WHEN sd_dur_temp = 0 OR sd_dur_temp IS NULL THEN 0 ELSE (crit_temp_dur - ma_dur_temp) / sd_dur_temp END AS z_dur_temp
+FROM rolling_window
+ORDER BY report_date, sensor_id;
+-----------------
+)
+2026-02-24 04:50:36,813 - duck - INFO - Completed: query - Duration: 0.1464s
+2026-02-24 04:50:36,830 - query_functions - INFO - Statistical features extracted. Rows: 104190
+2026-02-24 04:50:36,830 - query_functions - INFO - Training Isolation Forest Model...
+2026-02-24 04:50:41,441 - query_functions - INFO - Analysis Complete. Global Anomalies Detected: 4168
+2026-02-24 04:50:41,449 - __main__ - INFO - Completed: main - Duration: 7.9593s
