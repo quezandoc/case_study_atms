@@ -1,28 +1,28 @@
-This repo is the study case of Carlos Sandoval Appliance to BMST team.
+This repository contains the case study developed by Carlos Sandoval for the BMST team application.
 
 Tableau direction of results: https://us-east-1.online.tableau.com/#/site/quezandoc-72012affd3/workbooks/4095663/views
 
 ## How the code works
 
-You need to make a virtual enviroment with
-```
+Set up a virtual environment and install the dependencies:
+``` bash
 python3 -m venv .v
 source .v/bin/activate
-```
-Activating it and installing libraries related to the proyect with
-```
 pip install -r r.txt
 ```
-For generating the output you should run `python app.py`.
+To process the data and generate the outputs for Tableau, run:
+``` bash
+python app.py
+```
 
 ## Code details
 
-- `experimenting.py` is a code flow that i'd use for reconozing data.
-- `app.py` is the main flow of the generated data views for Tableau.
-- `query_funcions.py` is the core of the preparation of the view data for every KPI behind there are a function here.
-- `duck.py` is the in memory DBM for making querys to data.
-- `logging_decorator.py` is the formating of the output logs.
-- `data_types.py` is the definition of the type of every column header.
+- `experimenting.py` Initial EDA and data exploration workflow.
+- `app.py` Main execution script for generating Tableau data views.
+- `query_funcions.py` Core logic for KPI calculations and data preparation.
+- `duck.py` In-memory database management (DuckDB) for efficient querying.
+- `logging_decorator.py` Custom formatting for execution logs.
+- `data_types.py` Schema definitions and column type enforcement.
 
 ## KPI definitions
 
@@ -40,8 +40,7 @@ The analytical core of this project focuses on three operational issues: Anomaly
 
 2. Sensor Health & Availability
 
-    Evaluates the coverage and data integrity of the sensor transmitting rate.
-    Measure the Sensor Availability % evaluating if they transmitting to the hub.
+    Evaluates data integrity and transmission rates to determine the Sensor Availability %, verifying if sensors are successfully reporting to the hub.
 
 3. Device (Hub) Connectivity
 
@@ -53,21 +52,21 @@ The analytical core of this project focuses on three operational issues: Anomaly
 
 ## Key findings
 
-1. The device transmition rate isn't related to sensor transmition rate.
-2. The sums of duration times of a sensor in levels isn't related to sensor transmition rate.
-3. Every reports is for day and the transmitting duration is related to the seconds of the day that they are 86400.
-4. Some vehicles doesn't have a device/hub meanwhile some others have 1 or 2.
+1. Decoupled Transmission: Device transmission rates do not directly correlate with individual sensor transmission rates.
+2. Level Duration vs. Rate: The accumulated duration of sensor levels is independent of the transmission frequency.
+3. Daily Reporting: Reports are processed daily; duration metrics are normalized against the 86,400 seconds in a day.
+4. Hardware Variance: Fleet configuration is inconsistent; vehicles may have 0, 1, or 2 hubs/devices.
 
 ## Assumptions
 
-1. I assume that the priority of a sensor is just for sending methods.
-2. I assume that the sensor will send the report with or without device on board from near devices.
-3. I assume that presure will be related to the temparature.
-4. I assume that cold pressure is when you inflates the wheel and hot pressure is when the truck is on use.
+1. Priority Logic: Sensor priority is assumed to only dictate transmission protocols/methods.
+2. Mesh Reporting: Sensors may transmit data via nearby devices if the assigned on-board hub is missing or inactive.
+3. Correlation: A physical correlation is assumed between pressure and temperature trends.
+4. Thermal States: Distinct thresholds are assumed for "Cold Pressure" (static) and "Hot Pressure" (active operation).
 
 ## Limitations
 
-1. The Issolation forest randomness with the apttern recognition, I made some pattern recognition through Z-score fore give more information but sometimes an anomaly detected by ML is inside of the black box.
-2. Z-Score with 7 days rolling window will have issues with less than a week of data.
-3. I can't relate the sensor transmition rate with the device transmition rate
-4. The anomaly detection is unsupervised, without a ground truth, so i can't validate it with a confusion matrix for FP.
+1. Model Interpretability (Black Box): While Isolation Forest is effective at detecting complex patterns, its stochastic nature can make specific detections difficult to interpret. I implemented Z-Score recognition to provide statistical context, but some ML-flagged anomalies remain within the "black box" of the model's internal partitions.
+2. Cold Start Problem: The 7-day rolling Z-Score requires a full week of historical data to reach optimal accuracy.
+3. Transmission Correlation: Current data does not allow for a direct relational link between sensor-level and device-level transmission health.
+4. Unsupervised Validation: Since the detection is unsupervised and lacks "ground truth" labels, it is not possible to calculate a Confusion Matrix or precisely quantify False Positives (FP).
