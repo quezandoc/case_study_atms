@@ -1,3 +1,5 @@
+Discover from 19/02/26
+
 ### ONLY SCHEMA AND RAW DATA
 Here we have 2 sets of data `time_in_level_device` and `time_in_level_sensor`. In both we've a *relation to a **vehicle with his id***, so the main relation from both tables is this.
 
