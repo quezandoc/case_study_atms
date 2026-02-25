@@ -8,7 +8,7 @@ Tableau dashboards are in this links:
 
 Explanation video: https://youtu.be/d7Esn5k8aOw
 
-File of teableau present on: `tableau_workbook_atms.twbx`
+File of teableau present on: `tableau_workbook.twbx`
 
 ## How the code works
 
