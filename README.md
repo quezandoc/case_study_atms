@@ -34,7 +34,7 @@ The analytical core of this project focuses on three operational issues: Anomaly
 
     - Z-Score (Statistical Deviation): Quantifies how many standard deviations a metric (Temperature/Pressure) deviates from its 7-day rolling average. Values where ∣z∣>3 are flagged as anomalies.
 
-    - ML Anomaly Score: Generated via Isolation Forest, this identifies multivariate outliers and complex behavioral patterns (e.g., "Physics Mismatches" like high temperature paired with low pressure) that traditional thresholds might miss.
+    - ML Anomaly Score: Generated via Isolation Forest, this score identifies multivariate outliers and complex behavioral patterns. The algorithm is particularly well-suited for vehicle sensor data collected over diverse terrains, as it adapts to the specific shape of the data to effectively isolate anomalies.
 
     - Global Anomaly Flag: A consolidated binary indicator that triggers when statistical or ML-based detection identifies a risk.
 
