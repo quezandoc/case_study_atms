@@ -1,8 +1,19 @@
 This repository contains the case study developed by Carlos Sandoval for the BMST team application.
 
-Tableau direction of results: https://us-east-1.online.tableau.com/#/site/quezandoc-72012affd3/workbooks/4095663/views
+Tableau dashboards are in this links:
+- Global Statistics:  https://us-east-1.online.tableau.com/t/quezandoc-72012affd3/views/bmst_atms_17720419832100/Statistics/7e5a5a4d-86e9-4ca6-8d2b-7bea812a13a4/9a673cff-f409-4ca1-87ba-e4bd2c3dfb92
+- Anomaly report: https://us-east-1.online.tableau.com/t/quezandoc-72012affd3/views/bmst_atms_17720419832100/Anomalyreport/5b18f673-c78e-4ace-81ad-6b2ed6cdb6af/64d9044e-b9b0-4e96-ae4f-c3735de76eac
+- Anomaly for vehicle overall: https://us-east-1.online.tableau.com/t/quezandoc-72012affd3/views/bmst_atms_17720419832100/Vehicleoveralltimeline/58669336-cd84-49d8-8223-f1f6f7422b67/e2150ecb-5c40-489c-b60a-ec0e1cdc9918
+- Anomaly for vehicle sensor: https://us-east-1.online.tableau.com/t/quezandoc-72012affd3/views/bmst_atms_17720419832100/Sensorvehicletimeline/1a717b12-2e42-4417-8bf3-0a8a122a4f61/d52e4e29-7f0b-4537-b03a-0b05352795f7
+
+Explanation video: https://youtu.be/d7Esn5k8aOw
+
+File of teableau present on: `tableau_workbook_atms.twbx`
 
 ## How the code works
+
+You need to put the input data on a folder on the root called `data/`
+And create another folder called `output/` for the creation of outputs
 
 Set up a virtual environment and install the dependencies:
 ``` bash
