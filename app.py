@@ -4,6 +4,7 @@ from duck import DuckDBAnalyzer
 from logging_decorator import log_function
 
 from query_functions import generate_device_health_report, generate_fleet_health_report, sensor_anomaly_detection
+from proactive.query_functions_ds import generate_mechanical_failure_report
 from data_types import dtype_mapping_device, dtype_mapping_sensor, date_cols
 
 class Colors:
@@ -48,12 +49,14 @@ if __name__ == "__main__":
         # Now that the data is loaded, we can create the necessary tables and perform the analysis to detect anomalies in temperature states. ##
         #######################################################################
 
-        logger.info("Performing comprehensive fleet health analysis...")
-        generate_fleet_health_report(analyzer, START_DATE, END_DATE)
-        logger.info("Performing comprehensive device health analysis...")
-        generate_device_health_report(analyzer, START_DATE, END_DATE)
-        logger.info("Performing comprehensive anomaly detection...")
-        sensor_anomaly_detection(analyzer, START_DATE, END_DATE)
+        # logger.info("Performing comprehensive fleet health analysis...")
+        # generate_fleet_health_report(analyzer, START_DATE, END_DATE)
+        # logger.info("Performing comprehensive device health analysis...")
+        # generate_device_health_report(analyzer, START_DATE, END_DATE)
+        # logger.info("Performing comprehensive anomaly detection...")
+        # sensor_anomaly_detection(analyzer, START_DATE, END_DATE)
 
+        logger.info("Performing comprehensive mechanical failure analysis...")
+        generate_mechanical_failure_report(analyzer, START_DATE, END_DATE)
     
     main()

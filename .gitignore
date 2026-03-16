@@ -1,3 +1,5 @@
 app_logs*
 .v/
 __pycache__/
+data/*
+output/*
