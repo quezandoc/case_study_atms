@@ -51,8 +51,8 @@ if __name__ == "__main__":
 
         # logger.info("Performing comprehensive fleet health analysis...")
         # generate_fleet_health_report(analyzer, START_DATE, END_DATE)
-        # logger.info("Performing comprehensive device health analysis...")
-        # generate_device_health_report(analyzer, START_DATE, END_DATE)
+        logger.info("Performing comprehensive device health analysis...")
+        generate_device_health_report(analyzer, START_DATE, END_DATE)
         # logger.info("Performing comprehensive anomaly detection...")
         # sensor_anomaly_detection(analyzer, START_DATE, END_DATE)
 

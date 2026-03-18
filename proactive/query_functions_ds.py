@@ -18,8 +18,12 @@ HUB_EFFICIENCY_THRESHOLD = 0.3         # 50% connectivity
 # ------------------------------------------------------------------
 
 def generate_mechanical_failure_report(analyzer, start_date, end_date,
-                                       output_sensor_path='output/sensor_failures.csv',
-                                       output_device_path='output/hub_failures.csv'):
+                                       output_sensor_path='output/sensor_anomalies.csv',
+                                       output_device_path='output/hub_anomalies.csv',
+                                       output_sensor_variables_path='output/sensor_variables.csv',
+                                       output_sensor_statistics_path='output/sensor_statistics.csv',
+                                       output_device_statistics_path='output/device_statistics.csv',
+                                       ):
     """
     Generates a daily report classifying sensor and hub issues into five buckets:
     - Slow Leak (procedural deflation)
@@ -36,30 +40,42 @@ def generate_mechanical_failure_report(analyzer, start_date, end_date,
     logger.info(f"Starting mechanical failure analysis ({start_date} to {end_date})...")
 
     # Step 1: Extract sensor-level features
-    sensor_df = _extract_sensor_features(analyzer, start_date, end_date)
+    sensor_anomalies_df = _extract_sensor_features(analyzer, start_date, end_date)
 
     # Step 2: Extract device-level features
-    device_df = _extract_device_features(analyzer, start_date, end_date)
+    device_anomalies_df = _extract_device_features(analyzer, start_date, end_date)
 
     # Step 3: Classify sensor issues
-    sensor_df = _classify_sensor_issues(sensor_df)
+    sensor_anomalies_df = _classify_sensor_issues(sensor_anomalies_df)
 
     # Step 4: Classify device issues
-    device_df = _classify_device_issues(device_df)
+    device_anomalies_df = _classify_device_issues(device_anomalies_df)
 
     # Step 5: Combine and format output
-    output_sensor_df = sensor_df[['id', 'report_date', 'vehicle_id', 'sensor_id', 'wheel_position', 'wheel_id',
+    output_sensor_anomalies_df = sensor_anomalies_df[['id', 'report_date', 'vehicle_id', 'sensor_id', 'wheel_position', 'wheel_id',
                            'issue_category', 'risk_score']]
-    output_sensor_df.to_csv(output_sensor_path, index=False)
+    output_sensor_anomalies_df.to_csv(output_sensor_path, index=False)
 
-    logger.info(f"Report saved to {output_sensor_path}. Total rows: {len(output_sensor_df)}")
+    logger.info(f"Report saved to {output_sensor_path}. Total rows: {len(output_sensor_anomalies_df)}")
 
-    output_device_df = device_df[['id', 'report_date', 'vehicle_id', 'device_id',
+    output_device_anomalies_df = device_anomalies_df[['id', 'report_date', 'vehicle_id', 'device_id',
                                  'issue_category', 'risk_score']]
-    output_device_df.to_csv(output_device_path, index=False)
-    logger.info(f"Report saved to {output_device_path}. Total rows: {len(output_device_df)}")
+    output_device_anomalies_df.to_csv(output_device_path, index=False)
+    logger.info(f"Report saved to {output_device_path}. Total rows: {len(output_device_anomalies_df)}")
 
-    return output_sensor_df, output_device_df
+    output_sensor_variables_df = sensor_anomalies_df[['id', 'report_date', 'temperature_avg', 'cold_pressure_avg', 'hot_pressure_avg']]
+    output_sensor_variables_df.to_csv(output_sensor_variables_path, index=False)
+    logger.info(f"Report saved to {output_sensor_variables_path}. Total rows: {len(output_sensor_variables_df)}")
+
+    output_sensor_statistics_df = sensor_anomalies_df[['id', 'report_date', 'transmitting_dur']]
+    output_sensor_statistics_df.to_csv(output_sensor_statistics_path, index=False)
+    logger.info(f"Report saved to {output_sensor_statistics_path}. Total rows: {len(output_sensor_statistics_df)}")
+
+    output_device_statistics_df = device_anomalies_df[['id', 'report_date', 'transmitting_dur', 'not_transmitting_dur', 'connectivity_efficiency', 'active_sensors']]
+    output_device_statistics_df.to_csv(output_device_statistics_path, index=False)
+    logger.info(f"Report saved to {output_device_statistics_path}. Total rows: {len(output_device_statistics_df)}")a
+
+    return output_sensor_anomalies_df, output_device_anomalies_df
 
 
 def _extract_sensor_features(analyzer, start_date, end_date):

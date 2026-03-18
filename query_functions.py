@@ -249,7 +249,7 @@ def generate_device_health_report(analyzer, start_date, end_date, output_folder=
     Focuses on connectivity, transmission levels, and vehicle status.
     Uses table: time_in_level_device
     """
-    logger.info(f"Generating Device (Hub) Connectivity Report ({start_date} to {end_date})...")
+    # logger.info(f"Generating Device (Hub) Connectivity Report ({start_date} to {end_date})...")
 
     # =========================================================================
     # 1. DEVICE AVAILABILITY & CONNECTIVITY (Daily Efficiency)
@@ -258,29 +258,29 @@ def generate_device_health_report(analyzer, start_date, end_date, output_folder=
     # - Analyzes how "talkative" the device is.
     # - Uptime % = Transmitting Time / Total Time (Transmit + Silence)
     
-    query_device_connectivity = f"""--sql
-SELECT
-    device_id,
-    vehicle_id,
-    report_start_at::DATE as report_date,
-    -- Connectivity Statistics
-    AVG(transmitting_dur) as avg_transmit_sec,
-    AVG(not_transmitting_dur) as avg_silence_sec,
-    -- Calculated Uptime % (Connectivity Efficiency)
-    ROUND(
-        SUM(transmitting_dur)::FLOAT /
-        NULLIF(SUM(transmitting_dur + not_transmitting_dur), 0) * 100
-    , 2) as connectivity_efficiency_pct
+#     query_device_connectivity = f"""--sql
+# SELECT
+#     device_id,
+#     vehicle_id,
+#     report_start_at::DATE as report_date,
+#     -- Connectivity Statistics
+#     AVG(transmitting_dur) as avg_transmit_sec,
+#     AVG(not_transmitting_dur) as avg_silence_sec,
+#     -- Calculated Uptime % (Connectivity Efficiency)
+#     ROUND(
+#         SUM(transmitting_dur)::FLOAT /
+#         NULLIF(SUM(transmitting_dur + not_transmitting_dur), 0) * 100
+#     , 2) as connectivity_efficiency_pct
 
-FROM time_in_level_device
-WHERE report_start_at BETWEEN '{start_date}' AND '{end_date}'
-GROUP BY 1, 2, 3
-ORDER BY report_date ASC; -- Worst connectivity first
-    """
+# FROM time_in_level_device
+# WHERE report_start_at BETWEEN '{start_date}' AND '{end_date}'
+# GROUP BY 1, 2, 3
+# ORDER BY report_date ASC; -- Worst connectivity first
+#     """
     
-    df_connectivity = analyzer.query(query_device_connectivity)
-    df_connectivity['connectivity_efficiency_pct'] = df_connectivity['connectivity_efficiency_pct'] / 100
-    df_connectivity.to_csv(f"{output_folder}report_device_connectivity.csv", index=False)
+#     df_connectivity = analyzer.query(query_device_connectivity)
+#     df_connectivity['connectivity_efficiency_pct'] = df_connectivity['connectivity_efficiency_pct'] / 100
+#     df_connectivity.to_csv(f"{output_folder}report_device_connectivity.csv", index=False)
     
     # =========================================================================
     # 2. FLEET STATUS OVERVIEW (Maintenance vs Service)
@@ -311,11 +311,11 @@ ORDER BY report_date;
     """
     
     df_status = analyzer.query(query_fleet_status)
-    df_status.to_csv(f"{output_folder}report_device_fleet_status.csv", index=False)
+    df_status.to_csv(f"{output_folder}fleet_status.csv", index=False)
     
     logger.info("Device (Hub) Stats generated.")
     
-    return {
-        "worst_device_id": df_connectivity.iloc[0]['device_id'] if not df_connectivity.empty else None,
-        "worst_device_efficiency": df_connectivity.iloc[0]['connectivity_efficiency_pct'] if not df_connectivity.empty else 0
-    }
+    # return {
+    #     "worst_device_id": df_connectivity.iloc[0]['device_id'] if not df_connectivity.empty else None,
+    #     "worst_device_efficiency": df_connectivity.iloc[0]['connectivity_efficiency_pct'] if not df_connectivity.empty else 0
+    # }
